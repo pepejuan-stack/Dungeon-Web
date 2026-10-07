@@ -4,29 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dungeon-Web</title>
+    <meta
+      name="description"
+      content="Dungeon-Web, un juego de mazmorras jugable en navegador para GitHub Pages."
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="app">
-      <header class="hud">
+    <div class="page-shell">
+      <header class="topbar">
         <div>
+          <p class="eyebrow">Aventura web</p>
           <h1>Dungeon-Web</h1>
-          <p>Encuentra los cristales y sale del calabozo</p>
         </div>
-        <div class="stats">
-          <span id="health">Vida: 5</span>
+        <div class="stats" aria-live="polite">
+          <span id="health">Vida: 5/5</span>
           <span id="crystals">Cristales: 0/3</span>
-          <span id="status">Estado: jugando</span>
+          <span id="status">Estado: espera</span>
         </div>
       </header>
 
-      <main class="game-panel">
-        <div id="game" aria-label="Juego del dungeon" role="application"></div>
-      </main>
+      <main class="game-wrapper">
+        <section class="game-panel">
+          <div id="game" class="game-board" aria-label="Tablero del juego" role="grid"></div>
+        </section>
 
-      <div class="controls">
-        <p>Controles: WASD o flechas</p>
-        <button id="restartBtn" type="button">Reiniciar</button>
+        <aside class="sidebar">
+          <div class="mission-box">
+            <h2>Misión</h2>
+            <p>Recoge los 3 cristales y llega a la puerta final.</p>
+            <ul>
+              <li>Usa WASD o flechas</li>
+              <li>Evita a los enemigos</li>
+              <li>Cuando tengas los cristales, ve a la salida</li>
+            </ul>
+          </div>
+
+          <div class="controls-box">
+            <button id="startBtn" class="primary">Iniciar aventura</button>
+            <button id="restartBtn" class="secondary">Reiniciar</button>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <div id="overlay" class="overlay visible" aria-live="assertive">
+      <div class="overlay-card">
+        <h2 id="overlayTitle">Dungeon-Web</h2>
+        <p id="overlayText">Explora el calabozo, recoge los cristales y escapa.</p>
+        <button id="overlayBtn" class="primary">Empezar</button>
       </div>
     </div>
 

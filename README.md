@@ -1,48 +1,47 @@
 # Dungeon-Web
 
-Un pequeño juego de mazmorras diseñado para funcionar como una página web estática.
+Un juego de mazmorras jugable en navegador. Está pensado para publicarse como una página web con GitHub Pages.
 
 ## Cómo jugar
 
-- Abre el archivo `index.html` en tu navegador.
+- Abre `index.html` en el navegador, o publicarlo en GitHub Pages.
 - Usa `W`, `A`, `S`, `D` o las flechas para moverte.
-- Recolecta los 3 cristales.
-- Luego ve a la salida y gana.
-- Si un enemigo te toca, pierdes vida.
+- Recoge los 3 cristales del mapa.
+- Cuando los tengas todos, ve a la salida marcada con 🚪.
+- Evita a los enemigos y no te quedes sin vida.
 
 ## Objetivo
 
-Recoger todos los cristales y llegar a la puerta final antes de que la vida llegue a 0.
+Escapar del calabozo consiguiendo todos los cristales sin caer derrotado.
+
+## Archivos del proyecto
+
+- `index.html`: estructura general
+- `style.css`: diseño visual del juego
+- `script.js`: lógica del juego
 
 ## Publicar en GitHub Pages
 
-1. Ve a tu repositorio en GitHub.
-2. Entra en Settings > Pages.
-3. Selecciona "Deploy from a branch".
+1. Entra en tu repositorio en GitHub.
+2. Abre `Settings` → `Pages`.
+3. En `Source`, selecciona `Deploy from a branch`.
 4. Elige la rama `main` y la carpeta `/root`.
 5. Guarda.
-6. GitHub te dará una URL pública del tipo:
+6. GitHub te dará una URL parecida a:
    `https://pepejuan-stack.github.io/Dungeon-Web/`
 
-Nota: para que GitHub Pages funcione con un repositorio privado, normalmente necesitas una configuración de GitHub que lo permita o publicarlo. Si quieres que cualquiera pueda verlo, el repositorio debe ser público.
+## Notas
 
-## Archivos principales
+- Este proyecto no usa dependencias externas ni backend.
+- Es compatible con navegadores modernos.
+- Si quieres hacerlo público para cualquier persona, el repositorio debe ser público o tener acceso de Pages configurado.
 
-- `index.html`: estructura de la página
-- `style.css`: estilo del juego
-- `script.js`: lógica del juego
+## Siguientes mejoras posibles
 
-## Estado del proyecto
-
-Este proyecto está pensado como un juego jugable en navegador, sin dependencias externas ni backend.
-
----
-
-Si quieres, en el siguiente paso puedo ampliarlo con:
-- inventario
-- combate más avanzado
-- música y sonidos
-- sprite art
-- menús y pantallas de inicio
-- más niveles
+- Menú de inicio más avanzado
+- Sonidos y música
+- Más niveles
+- Más enemigos y habilidades
+- Sistema de puntuación
+- Modo móvil con botones táctiles
 
